@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="aAw-4c-lIT">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Hall of Frame!-->
@@ -16,70 +17,93 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cDk-HW-FXf">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Rt7-Rv-BEY">
-                                    <size key="itemSize" width="376" height="370"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="OuT-eb-0le">
+                                <rect key="frame" x="20" y="179" width="549" height="279"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6UQ-7w-ZhP">
+                                    <size key="itemSize" width="363" height="363"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="AMO-9x-4F8" customClass="PictureCollectionViewCell">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionID" id="lZ3-sY-QaS">
+                                        <rect key="frame" x="0.0" y="64" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="363" height="363"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dog" translatesAutoresizingMaskIntoConstraints="NO" id="OP3-mf-S6E">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="y4L-eb-vPV">
                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                                    <variation key="widthClass=compact" fixedFrame="YES">
-                                                        <rect key="frame" x="49" y="46" width="264" height="264"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="330" id="2s6-O7-ZBa"/>
+                                                        <constraint firstAttribute="width" constant="330" id="xCj-z6-Yqj"/>
+                                                    </constraints>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="2s6-O7-ZBa"/>
+                                                            <exclude reference="xCj-z6-Yqj"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <variation key="widthClass=compact">
+                                                        <mask key="constraints">
+                                                            <include reference="2s6-O7-ZBa"/>
+                                                            <include reference="xCj-z6-Yqj"/>
+                                                        </mask>
                                                     </variation>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <constraints>
+                                            <constraint firstItem="y4L-eb-vPV" firstAttribute="top" secondItem="lZ3-sY-QaS" secondAttribute="topMargin" constant="9" id="BdK-BE-lUc"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="y4L-eb-vPV" secondAttribute="bottom" constant="8" id="FhX-Dy-guf"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="y4L-eb-vPV" secondAttribute="trailing" constant="9" id="mk3-hT-UKE"/>
+                                            <constraint firstItem="y4L-eb-vPV" firstAttribute="leading" secondItem="lZ3-sY-QaS" secondAttribute="leadingMargin" constant="8" id="n0k-yS-LFB"/>
+                                            <constraint firstItem="y4L-eb-vPV" firstAttribute="centerY" secondItem="lZ3-sY-QaS" secondAttribute="centerY" id="r5E-ds-tOO"/>
+                                            <constraint firstItem="y4L-eb-vPV" firstAttribute="centerX" secondItem="lZ3-sY-QaS" secondAttribute="centerX" id="z9V-pg-Nat"/>
+                                        </constraints>
                                         <variation key="default">
                                             <mask key="subviews">
-                                                <exclude reference="OP3-mf-S6E"/>
+                                                <exclude reference="y4L-eb-vPV"/>
+                                            </mask>
+                                            <mask key="constraints">
+                                                <exclude reference="BdK-BE-lUc"/>
+                                                <exclude reference="FhX-Dy-guf"/>
+                                                <exclude reference="mk3-hT-UKE"/>
+                                                <exclude reference="n0k-yS-LFB"/>
+                                                <exclude reference="r5E-ds-tOO"/>
+                                                <exclude reference="z9V-pg-Nat"/>
                                             </mask>
                                         </variation>
                                         <variation key="widthClass=compact">
                                             <mask key="subviews">
-                                                <include reference="OP3-mf-S6E"/>
+                                                <include reference="y4L-eb-vPV"/>
+                                            </mask>
+                                            <mask key="constraints">
+                                                <include reference="BdK-BE-lUc"/>
+                                                <include reference="FhX-Dy-guf"/>
+                                                <include reference="mk3-hT-UKE"/>
+                                                <include reference="n0k-yS-LFB"/>
+                                                <include reference="r5E-ds-tOO"/>
+                                                <include reference="z9V-pg-Nat"/>
                                             </mask>
                                         </variation>
                                     </collectionViewCell>
                                 </cells>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="64" width="400" height="536"/>
+                                    <rect key="frame" x="0.0" y="59" width="400" height="533"/>
                                 </variation>
-                                <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="b6K-lF-QNf"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="QvV-bu-FGO"/>
-                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="cDk-HW-FXf"/>
-                            </mask>
-                        </variation>
-                        <variation key="widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="cDk-HW-FXf"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Hall of Frame!" id="v1C-Qg-rCF"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1033.5" y="1047"/>
+            <point key="canvasLocation" x="1032" y="1047"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZzX-oO-dgB">
@@ -100,7 +124,4 @@
             <point key="canvasLocation" x="286.5" y="1047"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Dog" width="220" height="277"/>
-    </resources>
 </document>
