@@ -74,14 +74,10 @@
                                 <include reference="cDk-HW-FXf"/>
                             </mask>
                         </variation>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="Xox-nC-ctO" appends="YES" id="dbJ-sf-mht"/>
-                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Hall of Frame!" id="v1C-Qg-rCF"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="Xox-nC-ctO"/>
             </objects>
             <point key="canvasLocation" x="1033.5" y="1047"/>
         </scene>

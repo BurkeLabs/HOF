@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol PictureCollectionViewCellDelegate <NSObject>
+
+-(void)PictureCollectionViewCell:(id)picture didTappedButton:(UIButton *)button;
+
+@end
+
 @interface PictureCollectionViewCell : UICollectionViewCell
+
+@property UIImage *image;
+@property UIColor *frameColor;
 
 @end
