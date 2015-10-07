@@ -14,6 +14,8 @@
 		A89361C11BC5B56C000D5217 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A89361C01BC5B56C000D5217 /* Assets.xcassets */; };
 		A89361C41BC5B56C000D5217 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A89361C21BC5B56C000D5217 /* LaunchScreen.storyboard */; };
 		A89361CF1BC5B56C000D5217 /* HallOfFramesUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A89361CE1BC5B56C000D5217 /* HallOfFramesUITests.m */; };
+		A89361DB1BC5BBCA000D5217 /* PictureCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A89361DA1BC5BBCA000D5217 /* PictureCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		A89361DE1BC5BBE4000D5217 /* Picture.m in Sources */ = {isa = PBXBuildFile; fileRef = A89361DD1BC5BBE4000D5217 /* Picture.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,10 @@
 		A89361CA1BC5B56C000D5217 /* HallOfFramesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HallOfFramesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A89361CE1BC5B56C000D5217 /* HallOfFramesUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HallOfFramesUITests.m; sourceTree = "<group>"; };
 		A89361D01BC5B56C000D5217 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A89361D91BC5BBCA000D5217 /* PictureCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureCollectionViewCell.h; sourceTree = "<group>"; };
+		A89361DA1BC5BBCA000D5217 /* PictureCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureCollectionViewCell.m; sourceTree = "<group>"; };
+		A89361DC1BC5BBE4000D5217 /* Picture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Picture.h; sourceTree = "<group>"; };
+		A89361DD1BC5BBE4000D5217 /* Picture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Picture.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,9 +89,13 @@
 			children = (
 				A89361B71BC5B56C000D5217 /* AppDelegate.h */,
 				A89361B81BC5B56C000D5217 /* AppDelegate.m */,
+				A89361BD1BC5B56C000D5217 /* Main.storyboard */,
 				A89361BA1BC5B56C000D5217 /* ViewController.h */,
 				A89361BB1BC5B56C000D5217 /* ViewController.m */,
-				A89361BD1BC5B56C000D5217 /* Main.storyboard */,
+				A89361D91BC5BBCA000D5217 /* PictureCollectionViewCell.h */,
+				A89361DA1BC5BBCA000D5217 /* PictureCollectionViewCell.m */,
+				A89361DC1BC5BBE4000D5217 /* Picture.h */,
+				A89361DD1BC5BBE4000D5217 /* Picture.m */,
 				A89361C01BC5B56C000D5217 /* Assets.xcassets */,
 				A89361C21BC5B56C000D5217 /* LaunchScreen.storyboard */,
 				A89361C51BC5B56C000D5217 /* Info.plist */,
@@ -212,6 +222,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A89361BC1BC5B56C000D5217 /* ViewController.m in Sources */,
+				A89361DE1BC5BBE4000D5217 /* Picture.m in Sources */,
+				A89361DB1BC5BBCA000D5217 /* PictureCollectionViewCell.m in Sources */,
 				A89361B91BC5B56C000D5217 /* AppDelegate.m in Sources */,
 				A89361B61BC5B56C000D5217 /* main.m in Sources */,
 			);
