@@ -10,4 +10,17 @@
 
 @implementation Picture
 
+-(instancetype)initWithFullName:(NSString *)name andDetail:(NSString *)detail andImage:(UIImage *)creatureImage andMutableArray:(NSMutableArray *)accessories {
+
+    self = [super init];
+
+    if (self) {
+        self.name = name;
+        self.detail = detail;
+        self.creatureImage = creatureImage;
+        self.accessories = accessories;
+    }
+    return self;
+}
+
 @end
